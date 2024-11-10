@@ -1,0 +1,143 @@
+*{
+margin: 0;
+pedding: 0;
+box-sizing: border-box;
+font-family: sans-serif;
+}
+
+.contenedor-tarjetas {
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+border-radius: 10px;
+border: 1px solid #000000;
+}
+
+body{
+display: flex;
+flex-wrap: wrap;
+align-items: center;
+justify-content: center;
+min-height: 100vh;
+background: rgb(9, 74, 80);
+background-color: #fffde7;
+}
+
+.tarjeta {
+position: relative;
+width: 250px;
+height: 250px;
+margin: 20px;
+}
+
+.tarjeta .face {
+position: absolute;
+width: 100%;
+height: 100%;
+backface-visibility: hidden;
+border-radius: 10px
+overflow: hidden;
+transition: .5s;
+}
+
+.tarjeta .frente {
+transform: perspective(600px) rotateY(0deg);
+box-shadow: 0 5px 10px #000;
+}
+
+.tarjeta .frente img {
+position: absolute;
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+
+.tarjeta .frente h3 {
+position: absolute;
+bottom: 0;
+width: 100%;
+height: 45px;
+line-height: 45px;
+color: #000000;
+background: rgba(0,0,0,.4);
+text-align: center;
+}
+  
+.tarjeta .reverso{
+transform: perspective(600px) rotateY(180deg);
+background: rgb(3, 35, 54);
+pedding: 15px;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+box-shadow: 0 5px 10px #000000;
+background: #000000;
+}
+
+.tarjeta .reverso .link {
+border-top: solid 1px #ffffff;
+height: 50px;
+line-height: 50px;
+}
+
+.tarjeta .reverso .link a {
+color: #f3f3f3;
+}
+
+.tarjeta .reverso h3 { 
+font-size: 30px;
+margin-top 20px;
+letter-spacing: 1px;
+text-align: center;
+}
+
+.tarjeta .reverso a {
+front-size: 1px;
+letter-spacing: 1px;
+text-align: center;
+}
+
+.tarjeta:hover .frente {
+transform: perspective(600px) rotateY(180deg);
+}
+
+.tarjeta:hover .reverso {
+transform: perspective(600px) rotateY(360deg);
+}
+
+h2
+{
+font-size: 15px;
+margin-bottom:20px;
+text-align: center;
+color: #ffffff;
+}
+
+p{
+font-size: 15px;
+color:#ffffff;
+margin-bottom:20px;
+text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
